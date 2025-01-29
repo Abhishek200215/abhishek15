@@ -31,7 +31,7 @@
    // Infinite Typing Effect
    document.addEventListener('DOMContentLoaded', function() {
        const typingElement = document.getElementById('typing-effect');
-       const phrases = ['What is Lorem Ipsum?', 'Why do we use it?']; 
+       const phrases = ['Web Developer', 'Email Template Developer', 'Landing Page Developer']; 
        let phraseIndex = 0;
        let i = 0;
    
@@ -111,5 +111,43 @@
            themeIcon.classList.replace('fa-moon', 'fa-sun');
        }
    });
+
+   document.getElementById('downloadButton').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent immediate download to show custom action
+
+    // Simulate loading animation or show confirmation
+    this.innerHTML = "Preparing...";
+    setTimeout(() => {
+      window.location.href = this.href;  // After 2 seconds, proceed with the download
+    }, 2000);  // Adjust the delay as needed for your desired functionality
+  });
+
+
+  window.onload = function() {
+    const progressBars = document.querySelectorAll('.progress-bar');
+ 
+    progressBars.forEach(bar => {
+       const width = bar.getAttribute('data-width');
+       bar.style.width = width + '%';
+    });
+ };
+
+
+ document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent form from reloading
+
+    var formData = new FormData(this);
+
+    fetch("send-message.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("responseMsg").innerText = data; // Show success/error message
+    })
+    .catch(error => console.error("Error:", error));
+});
+ 
     
     
