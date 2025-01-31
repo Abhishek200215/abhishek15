@@ -121,6 +121,14 @@ border-image: linear-gradient(to right, rgb(255, 214, 0), rgb(241, 237, 217)) 1;
         display: block !important;
      }
 
+     .show1{
+      display: inline-block !important;
+   }
+
+   .hide{
+      display: none !important;
+   }
+
     #about{
         padding: 10px !important;
      }
