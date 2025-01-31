@@ -13,6 +13,26 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <link rel="stylesheet" href="demo.css">
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      
+<style>
+   @keyframes flicker {
+        0% {
+            text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea;
+        }
+        25% {
+            text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #00eaff;
+        }
+        50% {
+            text-shadow: 0 0 15px hsl(175, 100%, 61%), 0 0 30px #00ffea, 0 0 50px #00ffea;
+        }
+        75% {
+            text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #00eaff;
+        }
+        100% {
+            text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea;
+        }
+    }
+</style>
    </head>
    
    <body>
@@ -21,15 +41,20 @@
          <div class="container">
             <h1 style="
     font-size: 2rem;
-    color: #fff;
-    text-shadow: 0 0 5px #f1c40f, 0 0 10px #f1c40f, 0 0 15px #f1c40f, 
-                 0 0 20px #ffbf00, 0 0 25px #ffbf00, 0 0 30px #ffbf00;
+    color: #000000;
     font-weight: bold;
     font-family: 'Arial', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
 "
-onmouseover="this.style.textShadow='0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff4000, 0 0 50px #ff4000'"
-onmouseout="this.style.textShadow='0 0 5px #f1c40f, 0 0 10px #f1c40f, 0 0 15px #f1c40f, 0 0 20px #ffbf00, 0 0 25px #ffbf00, 0 0 30px #ffbf00'">
+onmouseover="this.style.animation='none'; this.style.textShadow='0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff4000, 0 0 80px #ff4000'"
+onmouseout="this.style.animation='flicker 1.5s infinite alternate';">
     Abhishek
 </h1>
 
