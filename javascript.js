@@ -148,6 +148,20 @@
     })
     .catch(error => console.error("Error:", error));
 });
+
+ // Split text into letters for individual animations
+ document.addEventListener("DOMContentLoaded", function() {
+    let text = document.getElementById("neonText");
+    let letters = text.innerText.split("");
+    text.innerHTML = "";
+
+    letters.forEach((letter, index) => {
+        let span = document.createElement("span");
+        span.textContent = letter;
+        span.style.animationDelay = `${index * 0.1}s`; // Delayed animation for each letter
+        text.appendChild(span);
+    });
+});
  
     
     
