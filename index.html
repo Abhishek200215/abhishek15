@@ -122,7 +122,9 @@
                <h1>Abhishek E T</h1>
                <h2 id="typing-effect"> </h2>
                <p>As a skilled Web Developer, I create <b>responsive websites</b> that are both functional and visually appealing. I also specialize in <b>Email Template Development</b>, crafting optimized templates for seamless engagement across all devices. Additionally, I design high-converting <b>Landing Pages</b> that drive results through clean, user-focused design and fast performance.</p>
-               <button id="aboutBtn">See My Work in Action</button>
+               <button id="aboutBtn" style="padding: 10px 20px; background-color: transparent; color: #f1c40f; border: 2px solid #f1c40f; cursor: pointer; border-radius: 10px; font-size: 16px; font-weight: bold; text-transform: uppercase; transition: all 0.4s ease, box-shadow 0.4s ease; box-shadow: 0 0 5px #f1c40f, 0 0 10px #f1c40f, 0 0 15px #f1c40f;">
+                  See My Work in Action
+              </button>
             </div>
          </section>
       </main>
@@ -313,7 +315,10 @@
          <div class="download-section">
             <h2><span>Download</span> CV</h2>
             <p>Looking to learn more about my skills and experience?<br>Download my CV and explore my professional journey!</p>
-            <a href="Documents/Abhishek__E_T_-_Python_Full_Stack_Deleloper_and_MERN_Stack_Developer-5.pdf"  id="downloadButton" class="download-btn" download>Download Now</a>
+            <a href="Documents/Abhishek__E_T_-_Python_Full_Stack_Deleloper_and_MERN_Stack_Developer-5.pdf" id="downloadButton" class="download-btn" download
+    style="padding: 12px 30px; background-color: transparent; color: #000000; border: 2px solid #00FF00; text-decoration: none; cursor: pointer; border-radius: 10px; font-size: 16px; font-weight: bold; text-transform: uppercase; transition: all 0.4s ease, box-shadow 0.4s ease; box-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;">
+    Download Now
+</a>
          </div>
       </div>
    </div>
@@ -362,7 +367,7 @@
                   <input type="text" name="name" id="name" placeholder="Your Name" required>
                   <input type="email" name="email" id="email" placeholder="Your Email" required>
                   <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
-                  <button type="submit" class="bt">Submit</button>
+                  <button type="submit" class="bt" >Submit</button>
                </form>
             </div>
 
@@ -408,5 +413,28 @@
       <i class="fas fa-arrow-up"></i>
       </button>
       <script src="javascript.js"></script>
+      
+      <script>
+         document.getElementById("aboutBtn").addEventListener("mouseenter", function() {
+             this.style.borderRadius = "50px";  // On hover, the border radius changes
+             this.style.boxShadow = "0 0 20px #f1c40f, 0 0 30px #f1c40f, 0 0 40px #f1c40f";  // Neon glow effect
+         });
+     
+         document.getElementById("aboutBtn").addEventListener("mouseleave", function() {
+             this.style.borderRadius = "10px";  // On hover out, the border radius returns
+             this.style.boxShadow = "0 0 5px #f1c40f, 0 0 10px #f1c40f, 0 0 15px #f1c40f";  // Reset glow effect
+         });
+
+
+         document.getElementById("downloadButton").addEventListener("mouseenter", function() {
+        this.style.borderRadius = "50px";  // On hover, the border radius changes
+        this.style.boxShadow = "0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00";  // Neon glow effect
+    });
+
+    document.getElementById("downloadButton").addEventListener("mouseleave", function() {
+        this.style.borderRadius = "10px";  // On hover out, the border radius returns
+        this.style.boxShadow = "0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00";  // Reset glow effect
+    });
+     </script>
    </body>
 </html>
