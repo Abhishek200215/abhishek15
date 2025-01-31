@@ -111,5 +111,31 @@ border-image: linear-gradient(to right, rgb(255, 214, 0), rgb(241, 237, 217)) 1;
        font-size: 16px;
        padding: 8px 16px;
     }
+
+    .download-section p{
+        font-size: 15px;
+        line-height: 19px;
+     }
+
+     .show{
+        display: block !important;
+     }
+
+    #about{
+        padding: 10px !important;
+     }
+
+     .header-section{
+        padding: 10px !important;
+        margin-bottom: 0px !important;
+     }
+
+     #services{
+        padding: 10px !important;
+     }
+
+     .services-section1{
+        padding: 10px !important;
+     }
  }
  
